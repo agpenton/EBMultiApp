@@ -1,5 +1,5 @@
 from subprocess import call
-from elasticdeploy.helpers import getCurrentConfigFile, cloneRepo, addRepo, checkEbInit, createBasicConfigFile, runCommandsBeforeApplicationCreation, createApplication, updateArtifact, getPathToApplicationFolder
+from eb_multi_app.helpers import getCurrentConfigFile, cloneRepo, addRepo, checkEbInit, createBasicConfigFile, runCommandsBeforeApplicationCreation, createApplication, updateArtifact, getPathToApplicationFolder
 
 
 def showHelp():
@@ -13,7 +13,7 @@ def initialize():
     createBasicConfigFile()
     addRepo(True)
 
-    print("\n\nConfiguration done! Now run 'elasticdeploy create'\n\n")
+    print("\n\nConfiguration done! Now run 'eb_multi_app create'\n\n")
 
 
 def cloneAll():
@@ -40,11 +40,11 @@ def create():
         updateArtifact(getPathToApplicationFolder() + applicationName)
 
         print(
-            "\n\n!! Now is a good time to test your final build. Afterwards you can deploy it with 'elasticdeploy deploy' !!\n\n")
+            "\n\n!! Now is a good time to test your final build. Afterwards you can deploy it with 'eb_multi_app deploy' !!\n\n")
 
     except KeyError:
         print(
-            "\nSomething is wrong with your config. Did you already initialize your project with 'elasticdeploy init'?\n")
+            "\nSomething is wrong with your config. Did you already initialize your project with 'eb_multi_app init'?\n")
 
     except:
         print("\n\nAn error happened. Bye bye!")

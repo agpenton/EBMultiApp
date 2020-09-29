@@ -1,5 +1,5 @@
 import boto3
-from elasticdeploy.helpers import getCurrentConfigFile, writeToConfigFile
+from eb_multi_app.helpers import getCurrentConfigFile, writeToConfigFile
 
 
 def uploadToS3(applicationName):

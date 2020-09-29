@@ -1,6 +1,6 @@
 from __future__ import print_function
 import sys
-from elasticdeploy.mainFunctions import showHelp, initialize, cloneAll, create, newRepo, deploy
+from eb_multi_app.mainFunctions import showHelp, initialize, cloneAll, create, newRepo, deploy
 
 
 def main():
